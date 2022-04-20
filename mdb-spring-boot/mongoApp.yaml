@@ -99,9 +99,6 @@ items:
             image: docker.io/bitnami/mongodb:4.4.13-debian-10-r25
             imagePullPolicy: "IfNotPresent"
             securityContext:
-              runAsNonRoot: true
-              runAsUser: "auto"
-              fsGroup: ""
             env:
               - name: BITNAMI_DEBUG
                 value: "false"
