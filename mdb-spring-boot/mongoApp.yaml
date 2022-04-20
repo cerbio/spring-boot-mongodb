@@ -4,18 +4,6 @@ kind: List
 items:
 -
   apiVersion: v1
-  kind: ServiceAccount
-  metadata:
-    name: mongo-mongodb
-    labels:
-      app.kubernetes.io/name: mongodb
-      helm.sh/chart: mongodb-11.1.3
-      app.kubernetes.io/instance: mongo
-      app.kubernetes.io/managed-by: Helm
-  secrets:
-    - name: mongo-mongodb
--
-  apiVersion: v1
   kind: Secret
   metadata:
     name: mongo-mongodb
@@ -97,8 +85,7 @@ items:
           app.kubernetes.io/managed-by: Helm
           app.kubernetes.io/component: mongodb
       spec:
-        
-        serviceAccountName: mongo-mongodb
+
         affinity:
           podAffinity:
             
