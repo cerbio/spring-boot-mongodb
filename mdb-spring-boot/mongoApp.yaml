@@ -113,7 +113,7 @@ items:
           nodeAffinity:
             
         securityContext:
-          fsGroup: 1001
+          fsGroup: 1000800010
           sysctls: []
         containers:
           - name: mongodb
@@ -121,7 +121,7 @@ items:
             imagePullPolicy: "IfNotPresent"
             securityContext:
               runAsNonRoot: true
-              runAsUser: 1001
+              runAsUser: 1000800010
             env:
               - name: BITNAMI_DEBUG
                 value: "false"
