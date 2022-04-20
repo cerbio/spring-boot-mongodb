@@ -93,35 +93,15 @@ items:
           app.kubernetes.io/managed-by: Helm
           app.kubernetes.io/component: mongodb
       spec:
-        
         serviceAccountName: default
-        affinity:
-          podAffinity:
-            
-          podAntiAffinity:
-            preferredDuringSchedulingIgnoredDuringExecution:
-              - podAffinityTerm:
-                  labelSelector:
-                    matchLabels:
-                      app.kubernetes.io/name: mongodb
-                      app.kubernetes.io/instance: mongo
-                      app.kubernetes.io/component: mongodb
-                  namespaces:
-                    - "default"
-                  topologyKey: kubernetes.io/hostname
-                weight: 1
-          nodeAffinity:
-            
-        securityContext:
-          fsGroup: 1000800010
-          sysctls: []
         containers:
           - name: mongodb
             image: docker.io/bitnami/mongodb:4.4.13-debian-10-r25
             imagePullPolicy: "IfNotPresent"
             securityContext:
               runAsNonRoot: true
-              runAsUser: 1000800010
+              runAsUser: 1001
+              fsGroup: 1001
             env:
               - name: BITNAMI_DEBUG
                 value: "false"
