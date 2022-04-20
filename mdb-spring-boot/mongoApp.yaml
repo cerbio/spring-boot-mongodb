@@ -3,6 +3,7 @@ apiVersion: v1
 kind: List
 items:
 -
+  # Source: mongodb/templates/secrets.yaml
   apiVersion: v1
   kind: Secret
   metadata:
@@ -19,6 +20,7 @@ items:
     mongodb-root-password: "Um9vdEBtb25nbzA="
     mongodb-passwords: "TGV0QE1lQFdyaXRlMA=="
 -
+  # Source: mongodb/templates/standalone/pvc.yaml
   kind: PersistentVolumeClaim
   apiVersion: v1
   metadata:
@@ -37,6 +39,7 @@ items:
       requests:
         storage: "8Gi"
 -
+# Source: mongodb/templates/standalone/svc.yaml
   apiVersion: v1
   kind: Service
   metadata:
@@ -60,6 +63,7 @@ items:
       app.kubernetes.io/instance: mongo
       app.kubernetes.io/component: mongodb
 -
+  # Source: mongodb/templates/standalone/dep-sts.yaml
   apiVersion: apps/v1
   kind: Deployment
   metadata:
