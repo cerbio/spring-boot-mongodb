@@ -31,11 +31,11 @@ components:
         name: MAVEN_OPTS
   - alias: wasbase
     type: kubernetes
-    reference: 'https://raw.githubusercontent.com/cerbio/spring-boot-mongodb/main/mdb-spring-boot/mongoApp.yaml'
+    reference: 'https://raw.githubusercontent.com/cerbio/spring-boot-mongodb/main/mongo/mongoApp.yaml'
 commands:
 - name: Build
   actions:
   - type: exec
     component: maven
-    command: 'mvnw clean package'
+    command: './mvnw clean package'
     workdir: ${CHE_PROJECTS_ROOT}/devenv/mdb-spring-boot
