@@ -32,6 +32,7 @@ components:
   - alias: wasbase
     type: kubernetes
     reference: 'https://raw.githubusercontent.com/cerbio/spring-boot-mongodb/main/mongo/mongoApp.yaml'
+    mountSources: true
 commands:
 - name: Build
   actions:
