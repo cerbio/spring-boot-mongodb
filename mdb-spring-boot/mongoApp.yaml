@@ -17,8 +17,8 @@ items:
       app.kubernetes.io/component: mongodb
   type: Opaque
   data:
-    mongodb-root-password: "Um9vdEBtb25nbzA="
-    mongodb-passwords: "TGV0QE1lQFdyaXRlMA=="
+    mongodb-root-password: "Um9vdDBtb25nbzA="
+    mongodb-passwords: "TGV0ME1lMFdyaXRlMA=="
 -
   # Source: mongodb/templates/standalone/pvc.yaml
   kind: PersistentVolumeClaim
