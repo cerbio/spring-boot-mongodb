@@ -1,0 +1,71 @@
+<settings
+       xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.1.0 http://maven.apache.org/xsd/settings-1.1.0.xsd"
+       xmlns="http://maven.apache.org/SETTINGS/1.1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+       <mirrors>
+                    <mirror>
+                    <mirrorOf>*</mirrorOf>
+                    <name>repo</name>
+                    <url>http://alm-repos.sogei.it:8081/repository/maven-sogei</url>
+                    <id>repo</id>
+             </mirror>
+       </mirrors>
+       <profiles>
+             <profile>
+                    <repositories>
+                           <repository>
+                                  <snapshots>
+                                        <enabled>false</enabled>
+                                  </snapshots>
+                                  <id>central</id>
+                                  <name>repo</name>
+                                  <url>http://alm-repos.sogei.it:8081/repository/maven-sogei</url>
+                           </repository>
+                           <repository>
+                                  <snapshots />
+                                  <id>snapshots</id>
+                                  <name>repo</name>
+                                  <url>http://alm-repos.sogei.it:8081/repository/maven-sogei</url>
+                           </repository>
+						   <repository>
+								<id>archetype</id>
+									<url>http://other-repo.sogei.it:8081/repository/maven-public</url>
+							</repository>
+
+                    </repositories>
+                    <pluginRepositories>
+                           <pluginRepository>
+                                  <snapshots>
+                                        <enabled>false</enabled>
+                                  </snapshots>
+                                  <id>central</id>
+                                  <name>repo</name>
+                                  <url>http://alm-repos.sogei.it:8081/repository/maven-sogei</url>
+                           </pluginRepository>
+                           <pluginRepository>
+                                  <snapshots />
+                                  <id>snapshots</id>
+                                  <name>repo</name>
+                                  <url>http://alm-repos.sogei.it:8081/repository/maven-sogei</url>
+                           </pluginRepository>
+                    </pluginRepositories>
+                    <id>nexus</id>
+             </profile>
+       </profiles>
+       <activeProfiles>
+             <activeProfile>nexus</activeProfile>
+       </activeProfiles>
+	   
+	   
+      
+
+
+	<servers>		
+		<server>			
+		  <id>snapshot</id>
+		  <username>xxxx</username>
+		  <password>xxxx</password>
+		</server>	
+	</servers>
+
+	      
+</settings>
