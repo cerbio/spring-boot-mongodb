@@ -33,6 +33,16 @@ components:
     type: kubernetes
     reference: 'https://raw.githubusercontent.com/cerbio/spring-boot-mongodb/main/mongo/mongoApp-NoAuth.yaml'
     mountSources: true
+  - mountSources: true
+    alias: mongo-express
+    memoryLimit: 1Gi
+    type: dockerimage
+    image: 'mongo-express:0.54'
+    endpoints:
+      - name: mongo-express-ui
+        port: 9083
+    command: ['sleep']
+    args: ['infinity']    
 commands:
 - name: Build
   actions:

@@ -85,7 +85,7 @@ items:
               - name: MONGODB_EXTRA_USERNAMES
                 value: "developer"
               - name: MONGODB_EXTRA_DATABASES
-                value: "mygrocerylist"
+                value: "mymongodb"
               - name: ALLOW_EMPTY_PASSWORD
                 value: "yes"
               - name: MONGODB_SYSTEM_LOG_VERBOSITY
@@ -138,7 +138,9 @@ items:
               successThreshold: 1
               failureThreshold: 6
             resources:
-              limits: {}
+              limits: 
+                memory: "1Gi"
+                cpu: "800m"              
               requests: {}
             volumeMounts:
               - name: datadir
