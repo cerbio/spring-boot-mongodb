@@ -12,5 +12,5 @@ category: Language
 firstPublicationDate: '2020-07-30'
 spec:                                                             
   extensions:
-  - "https://gist.github.com/cf45d991dd1317b7492296fc1984da65.git/raw/mongodb.mongodb-vscode-0.9.3.vsix" 
+  - "https://raw.githubusercontent.com/cerbio/spring-boot-mongodb/main/codeready/mongodb.mongodb-vscode-0.9.3.vsix" 
 latestUpdateDate: "2022-07-30"
