@@ -1,0 +1,16 @@
+apiVersion: v2
+publisher: MongoDB
+name: MongoDB for Visual Studio
+version: 5.2
+type: Visual Studio Code extension
+displayName: MongoDB for Visual Studio
+title: MongoDB
+description: MongoDB
+icon: https://raw.githubusercontent.com/redhat-developer/codeready-workspaces/crw-2-rhel-8/dependencies/che-plugin-registry/resources/images/default.svg?sanitize=true
+repository: https://github.com/mongodb-js/vscode
+category: Language
+firstPublicationDate: '2020-07-30'
+spec:                                                             
+  extensions:
+  - "https://raw.githubusercontent.com/cerbio/spring-boot-mongodb/main/codeready/mongodb.mongodb-vscode-0.9.3.vsix" 
+latestUpdateDate: "2022-07-30"
