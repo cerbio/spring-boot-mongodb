@@ -75,6 +75,10 @@ items:
       spec:
         
         serviceAccountName: default
+        hostAliases:
+        - ip: "172.30.83.18"
+          hostnames:
+          - "alm-repos.sogei.it"
         containers:
           - name: mongodb
             image: docker.io/bitnami/mongodb:4.4.13-debian-10-r25
